@@ -1985,477 +1985,356 @@ nav ul li a:hover{
     cursor:pointer;
 
 }
-/* =====================================
-        COMPLETE MOBILE RESPONSIVE
-===================================== */
+/* ===========================
+      MOBILE HORIZONTAL SCROLL
+=========================== */
 
-@media screen and (max-width:768px){
+@media (max-width:768px){
 
-/* Header */
-header{
-    padding:15px 20px;
-    height:70px;
-    top:0;
-    background:#111;
+.video-container,
+.preorder-container,
+.recommended-container,
+.best-container,
+.daily-grid,
+.review-container,
+.india-grid{
+
+    display:flex;
+    overflow-x:auto;
+    gap:18px;
+    padding:10px 5px 20px;
+
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
 }
 
-/* Hero */
+.video-container::-webkit-scrollbar,
+.preorder-container::-webkit-scrollbar,
+.recommended-container::-webkit-scrollbar,
+.best-container::-webkit-scrollbar,
+.daily-grid::-webkit-scrollbar,
+.review-container::-webkit-scrollbar,
+.india-grid::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* Card Size */
+
+.videos,
+.card,
+.recommend-card,
+.best-card,
+.daily-card,
+.review-card,
+.india-card{
+
+    flex:0 0 85%;
+    scroll-snap-align:start;
+}
+
+/* Images */
+
+.game-img,
+.game-video,
+.media,
+.game-image{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+}
+@media(max-width:768px){
+
 .hero{
-    height:65vh;
+    height:60vh;
     padding:20px;
     background-position:center;
 }
 
 .hero-content{
-    width:100%;
     left:20px;
-    top:55%;
-    transform:translateY(-50%);
+    width:90%;
 }
 
 .hero-content h1{
-    width:100%;
     font-size:24px;
-    line-height:1.4;
 }
 
-.hero-content h2,
-.amount,
 .price{
     font-size:20px;
 }
 
-.discount{
-    font-size:12px;
 }
+@media(max-width:768px){
 
-/* Platform Bar */
 .platform-bar{
-    position:static;
-    width:95%;
-    margin:80px auto 20px;
+    position:relative;
+    top:10px;
+    left:0;
     transform:none;
+    width:95%;
+    margin:auto;
+
     flex-direction:column;
     gap:15px;
+
     border-radius:15px;
-    padding:15px;
 }
 
 .platforms{
-    width:100%;
+
     justify-content:center;
     flex-wrap:wrap;
-    gap:18px;
+    gap:15px;
+
 }
 
-.search-btn{
-    width:50px;
-    height:50px;
+}
+@media(max-width:768px){
+
+.reviews-container{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:15px;
+
+scroll-snap-type:x mandatory;
+
+scrollbar-width:none;
+
 }
 
-/* All Sections */
-.trending,
-.preorders,
-.recommended,
-.last-seen,
-.best-sellers,
-.daily-deals,
-.top-india,
-.news-section,
-.faq-section{
-    width:95%;
-    margin:50px auto;
+.reviews-container::-webkit-scrollbar{
+
+display:none;
+
 }
 
-/* All Grid Layouts */
-.video-container,
-.preorder-container,
-.recommended-container,
-.review-container,
-.best-container,
-.daily-grid,
-.india-grid,
-.india-section{
-    grid-template-columns:1fr !important;
-    gap:20px;
+.review-card{
+
+flex:0 0 85%;
+
+scroll-snap-align:start;
+
 }
 
-/* Cards */
-.videos,
-.card,
-.recommend-card,
-.last-card,
-.best-card,
-.daily-card,
-.review-card,
-.india-card{
-    width:100%;
 }
+@media(max-width:768px){
 
-/* Images */
-.game-img,
-.game-video,
-.media,
-.game-image,
-.news-image{
-    width:100%;
-    height:220px;
-}
-
-.news-image{
-    margin-left:0;
-    min-width:100%;
-}
-
-/* News */
-.news-card{
-    flex-direction:column;
-}
-
-.news-heading{
-    margin-left:0;
-}
-
-/* India Layout */
-.india-wrapper{
-    grid-template-columns:1fr;
-}
-
-.india-right{
-    margin:0;
-}
-
-/* Banner */
-.featured-game{
-    height:280px;
-}
-
-/* Features */
 .features{
-    flex-direction:column;
+
+flex-direction:column;
+
 }
 
 .feature-box{
-    width:100%;
-    border:none;
+
+width:100%;
+
+border:none;
+
 }
 
-/* Feedback */
+}
+@media(max-width:768px){
+
 .feedback-container{
-    flex-direction:column;
-    text-align:center;
+
+flex-direction:column;
+
+text-align:center;
+
 }
 
 .feedback-content{
-    padding:0;
-}
 
-.feedback-image{
-    margin:0;
-    justify-content:center;
+padding:0;
+
 }
 
 .feedback-image img{
-    width:180px;
+
+width:180px;
+
 }
 
-/* Promo */
+}
+@media(max-width:768px){
+
 .promo-content{
-    flex-direction:column;
-    text-align:center;
-    padding:30px 20px;
+
+flex-direction:column;
+
+padding:30px 20px;
+
 }
 
-.promo-text,
+.promo-text{
+
+width:100%;
+
+text-align:center;
+
+}
+
 .promo-image{
-    width:100%;
+
+width:100%;
+
+text-align:center;
+
+margin-top:20px;
+
 }
 
-.promo-text h2{
-    font-size:28px;
+}
+@media(max-width:768px){
+
+.news-card{
+
+flex-direction:column;
+
 }
 
-.promo-image{
-    margin-top:25px;
+.news-image{
+
+width:100%;
+
+height:220px;
+
+margin:0;
+
+min-width:100%;
+
 }
 
-/* Footer */
+.news-heading{
+
+margin-left:0;
+
+}
+
+}
+@media(max-width:768px){
+
+.india-section{
+
+grid-template-columns:1fr;
+
+}
+
+.category-banner{
+
+height:180px;
+
+}
+
+}
+@media(max-width:768px){
+
+.faq-section{
+
+width:95%;
+
+}
+
+.faq-box{
+
+padding:18px;
+
+}
+
+}
+@media(max-width:768px){
+
 .footer-container{
-    grid-template-columns:1fr;
-    gap:40px;
+
+grid-template-columns:1fr;
+
+gap:40px;
+
 }
 
 .footer-left,
 .footer-center{
-    border:none;
-    padding:0;
+
+border:none;
+
+padding:0;
+
 }
 
 .footer-bottom{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:20px;
-}
 
-.footer-bottom-right{
-    flex-wrap:wrap;
-    gap:15px;
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
 }
 
 .social-icons{
-    flex-wrap:wrap;
+
+flex-wrap:wrap;
+
 }
 
 .store-buttons{
-    flex-direction:column;
-    align-items:flex-start;
-}
 
-/* Text */
-h2{
-    font-size:24px !important;
-}
+flex-direction:column;
 
-h3{
-    font-size:18px;
-}
-
-p{
-    font-size:14px;
-}
+align-items:flex-start;
 
 }
 
-/* Small Phones */
-
-@media screen and (max-width:480px){
-
-.hero{
-    height:55vh;
-}
-
-.hero-content h1{
-    font-size:20px;
-}
-
-.game-img,
-.game-video,
-.media,
-.game-image,
-.news-image{
-    height:180px;
-}
-
-h2{
-    font-size:22px !important;
-}
-
-.platforms{
-    gap:12px;
-}
-
-.search-btn{
-    width:45px;
-    height:45px;
-}
-}
-/* ==========================================
-           LAPTOP (1024px - 1440px)
-========================================== */
-
-@media screen and (max-width:1400px){
-
-header{
-    padding:0 40px;
-}
-
-.platform-bar{
-    width:90%;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.hero-content{
-    left:60px;
-    width:450px;
-}
-
-.video-container,
-.preorder-container,
-.recommended-container{
-    grid-template-columns:repeat(3,1fr);
-}
-
-.review-container{
-    grid-template-columns:repeat(4,1fr);
-}
-
-.best-container{
-    grid-template-columns:repeat(4,1fr);
-}
-
-.daily-grid{
-    grid-template-columns:repeat(3,1fr);
-}
-
-.india-wrapper{
-    grid-template-columns:1fr 1fr;
-}
-
-.footer-container{
-    grid-template-columns:repeat(3,1fr);
-}
-
-img,
-video{
-    max-width:100%;
-    height:auto;
-}
-}
-/* ==========================================
-              TABLET (768px -1023px)
-========================================== */
-
-@media screen and (max-width:1023px){
-
-header{
-    padding:15px 25px;
-}
-
-.platform-bar{
-    width:95%;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.platforms{
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.hero{
-    height:70vh;
-}
-
-.hero-content{
-    width:80%;
-    left:40px;
-}
-
-.hero-content h1{
-    font-size:28px;
-}
+}@media(min-width:769px) and (max-width:1024px){
 
 .video-container,
 .preorder-container,
 .recommended-container,
 .daily-grid,
 .india-grid{
-    grid-template-columns:repeat(2,1fr);
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
 .review-container{
-    grid-template-columns:repeat(2,1fr);
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
 .best-container{
-    grid-template-columns:repeat(2,1fr);
-}
 
-.india-wrapper{
-    grid-template-columns:1fr;
-}
+grid-template-columns:repeat(2,1fr);
 
-.india-right{
-    margin:30px 0 0;
-}
-
-.news-card{
-    flex-direction:column;
-}
-
-.news-image{
-    width:100%;
-    min-width:100%;
-    margin-left:0;
-}
-
-.news-heading{
-    margin-left:0;
 }
 
 .footer-container{
-    grid-template-columns:1fr;
-}
 
-.footer-left,
-.footer-center{
-    border:none;
-}
-
-.footer-bottom{
-    flex-direction:column;
-    align-items:flex-start;
-}
+grid-template-columns:1fr;
 
 }
-/* Hide Checkbox */
-#menu{
-    display:none;
+
+.features{
+
+flex-wrap:wrap;
+
 }
 
-/* Hide Menu Icon in Desktop */
-.menu-icon{
-    display:none;
-}
+.feature-box{
 
-/* ===========================
-        MOBILE NAVBAR
-=========================== */
+width:48%;
 
-@media(max-width:768px){
-
-.menu-icon{
-    display:block;
-    font-size:30px;
-    color:#fff;
-    cursor:pointer;
-    z-index:1001;
-}
-
-/* Sidebar */
-
-.navbar{
-    position:fixed;
-    top:0;
-    left:-100%;
-    width:260px;
-    height:100vh;
-    background:#111;
-    transition:.4s;
-    padding-top:80px;
-    z-index:1000;
-}
-
-.navbar ul{
-    display:flex;
-    flex-direction:column;
-}
-
-.navbar ul li{
-    width:100%;
-}
-
-.navbar ul li a{
-    display:block;
-    padding:18px 25px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-/* Open Menu */
-
-#menu:checked ~ .navbar{
-    left:0;
 }
 
 }
