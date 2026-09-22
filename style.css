@@ -2399,3 +2399,63 @@ header{
 }
 
 }
+/* Hide Checkbox */
+#menu{
+    display:none;
+}
+
+/* Hide Menu Icon in Desktop */
+.menu-icon{
+    display:none;
+}
+
+/* ===========================
+        MOBILE NAVBAR
+=========================== */
+
+@media(max-width:768px){
+
+.menu-icon{
+    display:block;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+    z-index:1001;
+}
+
+/* Sidebar */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:260px;
+    height:100vh;
+    background:#111;
+    transition:.4s;
+    padding-top:80px;
+    z-index:1000;
+}
+
+.navbar ul{
+    display:flex;
+    flex-direction:column;
+}
+
+.navbar ul li{
+    width:100%;
+}
+
+.navbar ul li a{
+    display:block;
+    padding:18px 25px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Open Menu */
+
+#menu:checked ~ .navbar{
+    left:0;
+}
+
+}
