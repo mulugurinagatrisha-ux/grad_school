@@ -1,0 +1,3037 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background:rgb(41, 40, 40);
+    color:#fff;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+ul{
+    list-style:none;
+}
+.logo img{
+    width:180px;
+    height:auto;
+    display:block;
+    cursor:pointer;
+}
+/*=========================
+        HERO
+=========================*/
+/* Background Image */
+.hero-bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    top:0;
+    left:0;
+}
+/* Dark Overlay */
+.overlay{
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right,
+    rgba(0,0,0,.92) 20%,
+    rgba(0,0,0,.55) 55%,
+    rgba(0,0,0,.15));
+    position:absolute;
+    top:0;
+    left:0;
+}
+/*=========================
+        HEADER
+=========================*/
+header {
+    width: 100%;
+    min-height: 20px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(0,0,0,.28);
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.header-icons a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,.08);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 18px;
+}
+.header-icons a:hover {
+    background: #ff6a00;
+    transform: translateY(-3px);
+}
+/* =========================
+        NAVBAR
+=========================*/
+nav ul{
+    display:flex;
+    gap:35px;
+    align-items:center;
+}
+nav ul li a{
+    align-items:center;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    justify-content: center;
+    transition:.3s;
+    position:relative;
+}
+nav ul li a:hover{
+    color:#ff6600;
+}
+#menu{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+/*=========================
+      PLATFORM BAR
+=========================*/
+.platform-bar{
+    position:absolute;
+    top:90px;
+    left:45%;
+    transform:translateX(-45%);
+    z-index:50;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:500px;
+    background:rgba(25,25,25,.72);
+    padding:5px 10px;
+    border-radius:50px;
+    backdrop-filter:blur(5px);
+} 
+/* Platform Links*/
+.platforms{
+    display:flex;
+    gap:38px;
+}
+.platforms a{
+    color:#fff;
+    font-size:15px;
+    transition:.3s;
+}
+.platforms a i{
+    margin-right:8px;
+    font-size:20px;
+}
+.platforms a:hover{
+    color:#ff6b00;
+}
+/*=========================
+      SEARCH BUTTON
+=========================*/
+.search-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#ff6b00;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.35s;
+}
+.search-btn i{
+    font-size:24px;
+    color:white;
+}
+.search-btn:hover{
+    transform:scale(1.08);
+}
+/*=========================
+      HERO CONTENT
+=========================*/
+.hero-content{
+    position:absolute;
+    left:110px;
+    top:52%;
+    transform:translateY(-50%);
+    z-index:20;
+}
+/* Discount */
+.discount{
+    display:inline-block;
+    background:#ff6b00;
+    padding:10px 25px;
+    border-radius:6px;
+    font-size:10px;
+    font-weight:400;
+    margin-top:30px;
+    margin-left:200px;
+}
+/* Game Title */
+.hero-content h1{
+    font-size:40px;
+    line-height:1.2;
+    margin-bottom:15px;
+    font-weight:400;
+}
+/* Price */
+.hero-content h2{
+    font-size:40px;
+    font-weight:400;
+}
+.trending{
+    width:92%;
+    margin:60px auto;
+}
+.trending h2{
+    color:#fff;
+    font-size:28px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+.trending h2 i{
+    font-size:10px;
+}
+.video-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin: 15px;;
+}
+/* =========================
+   CARD
+========================= */
+.videos{
+    transition:.35s ease;
+    width:98%;
+    margin:auto;
+}
+.videos:hover{
+    transform:translateY(-8px);
+}
+/* =========================
+   IMAGE BOX
+========================= */
+.image-box{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    background:#000;
+    margin:auto;
+    width:95%;
+}
+.game-img,
+.game-video{
+    width:90%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+.game-video{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    transition:.45s;
+}
+.game-img{
+    transition:.45s;
+}
+.videos:hover .game-video{
+    opacity:1;
+}
+.videos:hover .game-img{
+    opacity:0;
+    transform:scale(1.08);
+}
+/* =========================
+   INFO
+========================= */
+.game-info{
+    margin-top:12px;
+}
+.game-info h4{
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    line-height:25px;
+    margin-bottom:8px;
+    transition:.3s;
+}
+.game-info h4:hover{
+    color:#ff6b00;
+}
+.game-info p{
+    color:#ff6b00;
+    font-size:20px;
+    font-weight:bold;
+}
+/* ================= FEATURES ================= */
+.features-section{
+    width:100%;
+    background:#1a1a1a;
+    padding:45px 0;
+}
+.features{
+    width:100%;
+    margin:50px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:nowrap;
+    background-color: #000;
+    object-fit: cover;
+}
+.feature-box{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 20px;
+    border-right:1px solid #3a3a3a;
+}
+.feature-box i{
+    font-size:30px;
+    color:#ff6b00;
+}
+.feature-box h3{
+    color:#fff;
+    font-size:18px;
+    margin-bottom:6px;
+}
+.feature-box p{
+    color:#bdbdbd;
+    font-size:14px;
+    margin:0;
+    line-height:1.5;
+}
+/* ===========================
+   TRUSTPILOT
+=========================== */
+.trustpilot{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    gap:10px;
+}
+.tp-header{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+.tp-header span{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+}
+.tp-logo{
+    color:#ff6b00;
+    font-size:26px;
+}
+.tp-stars{
+    display:flex;
+    gap:4px;
+}
+.star-box{
+    width:28px;
+    height:28px;
+    background:#00b67a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:3px;
+}
+.star-box i{
+    color:#fff;
+    font-size:14px;
+}
+.trustpilot p{
+    color:#cfcfcf;
+    font-size:14px;
+    margin:0;
+}
+.trustpilot p b{
+    color:#fff;
+}
+.trustpilot p span{
+    color:#cfcfcf;
+}
+/* ===========================
+   PRE-ORDERS SECTION
+=========================== */
+.preorders{
+    width:92%;
+    margin:60px auto;
+}
+.preorders h2{
+    color:#fff;
+    font-size:30px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+.preorders h2 i{
+    font-size:18px;
+}
+/* ===========================
+   GRID
+=========================== */
+.preorder-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+/* 4th Card Center */
+.fourth-card{
+    grid-column:2/3;
+}
+/* ===========================
+   CARD
+=========================== */
+.card{
+    transition:.35s ease;
+}
+.card:hover{
+    transform:translateY(-8px);
+}
+/* ===========================
+   IMAGE
+=========================== */
+.img-box{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    background:#000;
+}
+.game-imge,
+.gamee-video{
+    width:100%;
+    height:220px;
+    display:block;
+    object-fit:cover;
+}
+.gamee-video{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    transition:.4s;
+}
+.game-imge{
+    transition:.4s;
+}
+.card:hover .gamee-video{
+    opacity:1;
+}
+.card:hover .game-imge{
+    opacity:0;
+    transform:scale(1.08);
+}
+/* ===========================
+   INFO
+=========================== */
+.game-inf{
+    margin-top:12px;
+}
+.game-inf h4{
+    color:#fff;
+    font-size:17px;
+    line-height:24px;
+    margin-bottom:8px;
+    transition:.3s;
+}
+.game-inf h4:hover{
+    color:#ff6b00;
+}
+.game-inf p{
+    color:#ff6b00;
+    font-size:22px;
+    font-weight:bold;
+}
+/* ===========================
+   RECOMMENDED SECTION
+=========================== */
+.recommended{
+    width:92%;
+    margin:70px auto;
+}
+.recommended h2{
+    color:#fff;
+    font-size:30px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+/* ===========================
+   GRID
+=========================== */
+.recommended-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+/* ===========================
+   CARD
+=========================== */
+.recommend-card{
+    transition:.35s;
+}
+.recommend-card:hover{
+    transform:translateY(-6px);
+}
+/* ===========================
+   IMAGE BOX
+=========================== */
+.imag-box{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    background:#000;
+}
+.gam-img,
+.gam-video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+.gam-img{
+    transition:.4s;
+}
+.gam-video{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:.4s;
+}
+.recommend-card:hover .gam-img{
+    opacity:0;
+    transform:scale(1.08);
+}
+.recommend-card:hover .gam-video{
+    opacity:1;
+}
+/* ===========================
+   DISCOUNT BADGE
+=========================== */
+.discount{
+    position:absolute;
+    left:10%;
+    bottom:1%;
+    background:#ff6b00;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:6px;
+    font-size:12px;
+    margin-left:1px;
+    font-weight:bold;
+}
+
+/*==========================
+      LAST SEEN
+==========================*/
+
+.last-seen{
+    width:92%;
+    margin:70px auto;
+}
+
+.last-seen h2{
+    color:#fff;
+    font-size:30px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.last-seen h2 i{
+    font-size:14px;
+    color:#8a8a8a;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.last-seen h2 i:hover{
+    color:#fff;
+}
+
+/*==========================
+      CONTAINER
+==========================*/
+.lastseen-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+/*==========================
+      CARD
+==========================*/
+.last-card{
+    width:390px;
+    transition:.35s;
+}
+.last-card:hover{
+    transform:translateY(-8px);
+}
+
+/*==========================
+      IMAGE BOX
+==========================*/
+
+.img-boxx{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    background:#000;
+}
+
+/* Image */
+
+.game-img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+/* Video */
+
+.gamee-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:.4s;
+}
+
+/* Hover */
+
+.last-card:hover .game-img{
+    opacity:0;
+    transform:scale(1.08);
+}
+
+.last-card:hover .gamee-video{
+    opacity:1;
+}
+
+/*==========================
+      GAME INFO
+==========================*/
+
+.game-in{
+    margin-top:14px;
+}
+
+.game-in h4{
+    color:#fff;
+    font-size:17px;
+    font-weight:500;
+    line-height:25px;
+    margin-bottom:8px;
+    transition:.3s;
+}
+
+.last-card:hover{
+    color:#ff6a00;
+}
+
+.game-in p{
+    font-size:22px;
+    font-weight:500;
+}
+
+.game-img,
+.gamee-video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+.feedback-section{
+    width:100%;
+    background:#111;
+    padding:1px 0 0px;   /* Height inka tagguthundi */
+    overflow:hidden;
+}
+.feedback-container{
+    width:100%;
+    max-width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+.feedback-image{
+    flex:0 0 35%;
+    display:flex;
+    justify-content:flex-start;   /* Left side */
+    margin-left:10px;            /* Inka left ki move */
+}
+.feedback-image img{
+    width:250px;                  /* Image size tagginchindi */
+    display:block;
+}
+.feedback-content{
+    flex:1;
+    text-align:center;
+    padding-right:80px;
+}
+.stars{
+    margin-bottom:10px;
+}
+.feedback-content h2{
+    font-size:20px;
+    line-height:30px;
+    margin-bottom:18px;
+}
+.review-btn{
+    display:inline-block;
+    padding:10px 24px;
+    border:2px solid #444;
+    border-radius:50px;
+    background:transparent;
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+/* Hover Effect */
+.review-btn:hover{
+    background:#ffffff;
+    color:#111;
+    border:2px solid #ffffff;
+    transform:translateY(-3px);
+    box-shadow:0 0 15px rgba(255,255,255,0.35);
+}
+/* ===========================
+   REVIEWS SECTION
+=========================== */
+.reviews-section{
+    width:100%;
+    padding:30px 0 60px;
+    overflow:hidden;
+}
+.reviews-container{
+    width:92%;
+    margin:auto;
+    display:grid;
+    gap:15px;
+    grid-template-columns:repeat(5,1fr);
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+}
+.reviews-container::-webkit-scrollbar{
+    display:none;
+}
+/* ===========================
+   REVIEW CARD
+=========================== */
+.review-card{
+    width:100%;
+    min-width:0;
+    max-width:none;
+    border:1px solid #2d2d2d;
+    border-radius:12px;
+    padding:16px;
+    transition:.3s;
+}
+.review-card{
+    position:relative;
+}
+/* 3 Dots */
+.dots{
+    position:absolute;
+    top:15px;
+    right:15px;
+    color:#ffffff;
+    font-size:18px;
+    opacity:0;
+    cursor:pointer;
+    transition:.3s;
+}
+/* Hover appudu show */
+.review-card:hover .dots{
+    opacity:1;
+}
+/* ===========================
+   TOP
+=========================== */
+.review-top{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+}
+.review-top img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+.review-info{
+    flex:1;
+}
+.review-stars{
+    color:#ffb400;
+    font-size:14px;
+    letter-spacing:2px;
+    margin-bottom:6px;
+}
+.review-info h4{
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+/* ===========================
+   TEXT
+=========================== */
+.review-text{
+    color:#d5d5d5;
+    font-size:15px;
+    line-height:24px;
+    margin-bottom:18px;
+    min-height:45px;
+}
+.review-time{
+    color:#8d8d8d;
+    font-size:12px;
+    font-weight:500;
+}
+/* =========================
+   BEST SELLERS
+========================= */
+.best-sellers{
+    width:92%;
+    margin:70px auto;
+}
+.best-sellers h2{
+    color:#fff;
+    font-size:28px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+.best-sellers h2 i{
+    font-size:18px;
+}
+/* =========================
+   GRID
+========================= */
+.best-container{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:25px;
+}
+/* ---------- Row 1 ---------- */
+.best-card:nth-child(1){grid-column:1 / span 2;}
+.best-card:nth-child(2){grid-column:3 / span 2;}
+.best-card:nth-child(3){grid-column:5 / span 2;}
+/* ---------- Row 2 ---------- */
+.best-card:nth-child(4){grid-column:1 / span 2;}
+.best-card:nth-child(5){grid-column:3 / span 2;}
+.best-card:nth-child(6){grid-column:5 / span 2;}
+/* ---------- Row 3 (Center) ---------- */
+.best-card:nth-child(7){grid-column:2 / span 2;}
+.best-card:nth-child(8){grid-column:4 / span 2;}
+/* =========================
+   CARD
+========================= */
+.best-card{
+    width:100%;
+    transition:.3s;
+}
+.best-card:hover{
+    transform:translateY(-6px);
+}
+/* =========================
+   IMAGE BOX
+========================= */
+.image1-box{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    cursor:pointer;
+    background:#000;
+}
+.game-img,
+.game-video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+/* Image */
+.game-img{
+    transition:.4s;
+}
+/* Video */
+.game-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:.4s;
+    pointer-events:none;
+}
+/* Hover */
+.best-card:hover .game-img{
+    opacity:0;
+    transform:scale(1.08);
+}
+.best-card:hover .game-video{
+    opacity:1;
+}
+/* =========================
+   INFO
+========================= */
+.game-ino{
+    margin-top:12px;
+}
+.game-ino h4{
+    color:#fff;
+    font-size:16px;
+    line-height:23px;
+    margin-bottom:6px;
+    transition:.3s;
+}
+.best-card:hover{
+    color:#ff6b00;
+}
+.game-ino p{
+    font-size:22px;
+    font-weight:bold;
+}
+.hero{
+    width:100%;
+    height:500px;
+    background-image:
+    url("https://gaming-cdn.com/img/products/19517/hcover/19517.jpg?v=1787824628");   /* Mee image path */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    padding:60px;
+}
+.hero-content{
+    position:absolute;
+    left:70px;
+    top:50%;
+    transform: translateY(-50%);
+    color:#fff;
+    width:420px;
+}
+.hero-content h1{
+    font-size:30px;
+    width:400px;
+    margin-bottom:10px;
+    line-height:1.2;
+}
+.price{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:15px;
+}
+.discount{
+    background:#ff6600;
+    color:#fff;
+    padding:3px 8px;
+    border-radius:4px;
+    font-size:12px;
+    height:20px;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+}
+.amount{
+    font-size:20px;
+    font-weight:bold;
+    position:relative;
+    bottom:10px;
+    left:20px;
+}
+/*==========================
+      GAMER REVIEWS
+==========================*/
+.gamer-reviews{
+    width:100%;
+    padding:50px 3%;
+    background:#1b1b1b;
+}
+.review-heading{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+.review-heading h2{
+    color:#fff;
+    font-size:28px;
+    font-weight:500;
+}
+.review-heading i{
+    color:#999;
+    font-size:18px;
+}
+/*==========================
+      GRID
+==========================*/
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+/*==========================
+      CARD
+==========================*/
+.review-card{
+    background:#2c3136;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+/*==========================
+      IMAGE / VIDEO
+==========================*/
+.media{
+    position:relative;
+    width:100%;
+    height:170px;
+    overflow:hidden;
+}
+.media img,
+.media video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:opacity .3s ease;
+}
+.media video{
+    opacity:0;
+}
+.review-card:hover .media img{
+    opacity:0;
+}
+.review-card:hover .media video{
+    opacity:1;
+}
+/*==========================
+      CONTENT
+==========================*/
+.review-content{
+    padding:18px;
+}
+.review-icons{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+.left-icons{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+/*==========================
+      USER IMAGE
+==========================*/
+.user-img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:border-color .25s ease;
+}
+.user-img:hover{
+    border-color:#ff6a00;
+}
+/*==========================
+      USER ICON
+==========================*/
+.left-icons .fa-user{
+    width:42px;
+    height:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#1d2328;
+    color:#2f8dff;
+    font-size:20px;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:border-color .25s ease;
+}
+.left-icons .fa-user:hover{
+    border-color:#ff6a00;
+}
+/*==========================
+      LIKE
+==========================*/
+.like{
+    color:#43ff43;
+    font-size:22px;
+}
+/*==========================
+      DISLIKE
+==========================*/
+.dislike{
+    color:#ff4b4b;
+    font-size:22px;
+}
+/*==========================
+      MENU
+==========================*/
+.review-icons .fa-ellipsis-vertical{
+    color:#9b9b9b;
+    font-size:18px;
+}
+/*==========================
+      TEXT
+==========================*/
+.review-content p{
+    color:#d8d8d8;
+    font-size:15px;
+    line-height:1.8;
+}
+/*==========================
+    TOP INDIA GAMES
+==========================*/
+.top-india{
+    width:100%;
+    background:#242424;
+    padding:70px 0%;
+}
+/*==========================
+      MAIN LAYOUT
+==========================*/
+.india-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    align-items:start;
+}
+.india-right{
+    margin-left:-65px;
+    margin-right:35px;
+}
+/*==========================
+     LEFT BANNER
+==========================*/
+.featured-game{
+    position:relative;
+    width:100%;
+    height:520px;
+    overflow:hidden;
+    border-radius:10px;
+}
+.banner-bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.banner-character{
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:100%;
+    width:auto;
+    object-fit:contain;
+    z-index:2;
+}
+/*==========================
+      HEADING
+==========================*/
+.india-heading{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:15px;
+}
+.india-heading h2{
+    color:#fff;
+    font-size:28px;
+    margin:0;
+}
+.india-heading i{
+    color:#9a9a9a;
+    font-size:14px;
+}
+/*==========================
+      GRID
+==========================*/
+.india-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+.india-right{
+    margin-left:-65px;
+    margin-right:35px;
+}
+/*==========================
+      CARD
+==========================*/
+.india-card{
+    width:100%;
+}
+/*==========================
+      IMAGE + VIDEO
+==========================*/
+.game-image{
+    position:relative;
+    width:100%;
+    height:165px;
+    overflow:hidden;
+    border-radius:8px;
+}
+.game-image img,
+.game-image video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:opacity .3s ease;
+}
+.game-image video{
+    opacity:0;
+}
+.india-card:hover .game-image img{
+    opacity:0;
+    transform:scale(1.05);
+}
+.india-card:hover .game-image video{
+    opacity:1;
+    transform:scale(1.05);
+}
+/*==========================
+      DISCOUNT
+==========================*/
+.discount{
+    position:absolute;
+    left:0;
+    bottom:0;
+    background:#ff6a00;
+    color:#fff;
+    padding:5px 10px;
+    font-size:13px;
+    font-weight:600;
+    border-radius:0 6px 0 0;
+}
+/*==========================
+      INFO
+==========================*/
+.game-info{
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+}
+.game-info h4{
+    color:#fff;
+    font-size:14px;
+    line-height:1.4;
+    font-weight:500;
+    margin:0;
+    flex:1;
+}
+.price{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.news-heading{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:50px;
+    margin-bottom:35px;
+}
+.news-heading h2{
+    margin:0;
+    color:#fff;
+    font-size:28px;
+    font-weight:500;
+}
+.news-heading i{
+    color:#9a9a9a;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+.news-heading i:hover{
+    color:#fff;
+}
+.news-card{
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+.news-image{
+    width:280px;
+    min-width:280px;
+    height:180px;
+    margin-left:50px;
+    border-radius:8px;
+    overflow:hidden;
+}
+.news-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.news-content{
+    flex:1;
+}
+.news-date{
+    color:#8e8e8e;
+    font-size:13px;
+}
+.news-content h3{
+    color:#fff;
+    font-size:18px;
+    margin:12px 0;
+    line-height:1.4;
+    cursor:pointer;
+    transition:.3s;
+}
+.news-content h3:hover{
+    text-decoration:underline;
+}
+.news-content p{
+    color:#bdbdbd;
+    font-size:12px;
+    line-height:1.8;
+}
+.news-section{
+    padding:70px 30px;
+}
+.news-container{
+    max-width:1400px;
+    margin:0 auto;
+    transform:translateX(-35px);
+}
+.cat-title{
+    color:#fff;
+    font-size:28px;
+    margin:70px auto 30px;
+    width:90%;
+    font-weight:500;
+}
+.india-section{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:45px;
+    row-gap:80px;
+}
+.category-banner{
+    position:relative;
+    height:180px;
+    overflow:hidden;
+    cursor:pointer;
+    border-radius:15px;
+}
+.bg-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+    transition:.5s;
+    filter:brightness(.6);
+}
+.overlay{
+    position:absolute;
+    inset:0;
+    border-radius:16px;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.15));
+}
+.category-banner h3{
+    position:absolute;
+    left:22px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+    z-index:5;
+}
+.character{
+    position:absolute;
+    right:0;
+    bottom:0;
+    height:150px;
+    width:auto;
+    z-index:5;
+    transition:0.4s ease;
+    transform-origin: bottom center;
+}
+.category-banner:hover .bg-image{
+    transform:none;
+    filter:brightness(.6);
+}
+.category-banner:hover .character{
+    transform:scale(1.085);
+}
+.category-banner:hover{
+    transform:none;
+    box-shadow:none;
+}
+.character:hover{
+    transform: translateY(-8px) scale(1.04);
+}
+
+.promo-banner{
+    width:100%;
+    margin:70px auto;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 30% 50%, #14c8ff 0%, transparent 35%),
+    radial-gradient(circle at 80% 20%, #2d63ff 0%, transparent 45%),
+    linear-gradient(90deg,#061642,#0b1f63,#0c56d8);
+    min-height:360px;
+    display:flex;
+    align-items:center;
+}
+.promo-content{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px 70px;
+}
+.promo-text{
+    width:45%;
+}
+.promo-text h2{
+    color:#fff;
+    font-size:36px;
+    line-height:1.3;
+    margin-bottom:15px;
+}
+.promo-text p{
+    color:#d8e6ff;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.promo-text a{
+    display:inline-block;
+    padding:15px 28px;
+    background:#fff;
+    color:#111;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+.promo-text a:hover{
+    background:#ff6b00;
+    color:#fff;
+}
+.promo-image{
+    width:48%;
+    text-align:right;
+}
+.promo-image img{
+    width:100%;
+    max-width:520px;
+    filter:drop-shadow(0 20px 30px rgba(0,0,0,.4));
+}
+/* ================= DAILY DEALS ================= */
+.daily-deals{
+    width:90%;
+    margin:60px auto;
+    font-family:'Poppins',sans-serif;
+}
+.deal-title{
+    color:#fff;
+    font-size:28px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+.deal-title i{
+    font-size:18px;
+    color:#bdbdbd;
+}
+.daily-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+/* CARD */
+.daily-card{
+    background:#202020;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.35s;
+}
+.daily-card:hover{
+    transform:translateY(-6px);
+}
+/* IMAGE */
+.media{
+    position:relative;
+    width:100%;
+    height:190px;
+    overflow:hidden;
+}
+.media img,
+.media video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:.4s;
+}
+.media video{
+    opacity:0;
+}
+/* Hover */
+.daily-card:hover img{
+    opacity:0;
+    transform:scale(1.08);
+}
+.daily-card:hover video{
+    opacity:1;
+}
+/* Discount */
+.discount{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+    background:#ff6a00;
+    color:#fff;
+    font-size:13px;
+    font-weight:500;
+    padding:5px 10px;
+    border-radius:5px;
+    z-index:5;
+}
+/* CONTENT */
+.content{
+    background:#181818;
+    padding:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:15px;
+}
+.content p{
+    color:#fff;
+    font-size:14px;
+    line-height:1.4;
+    margin:0;
+    flex:1;
+    overflow:hidden;
+    display:flex;
+}
+.content h3{
+    color:#fff;
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+
+/* =========================
+   FAQ SECTION
+========================= */
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.faq-section h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+/* FAQ BOX */
+.faq-box {
+    width: 100%;
+    min-height: 65px;
+    background: #1b1b1b;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Arrow */
+.faq-box span:last-child {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+/* Hover */
+.faq-box:hover {
+    background: #242424;
+    border-color: #444444;
+}
+/* Arrow hover */
+.faq-box:hover span:last-child {
+    transform: translateX(5px);
+}
+/*======================================
+            FOOTER
+======================================*/
+.footer{
+    width:100%;
+    background:#161616;
+    padding:60px 7% 30px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+.footer-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:60px;
+    align-items:flex-start;
+}
+/*======================================
+          LEFT
+======================================*/
+.tp-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:8px;
+}
+.tp-logo{
+    color:#00b67a;
+}
+.tp-title span{
+    color:#fff;
+    font-weight:600;
+    font-size:18px;
+}
+.tp-stars{
+    display:flex;
+    gap:4px;
+    margin-bottom:8px;
+}
+.tp-stars .star{
+    width:28px;
+    height:28px;
+    background:#00b67a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.tp-stars i{
+    color:#fff;
+    font-size:16px;
+}
+.tp-stars .half{
+    background:#00b67a;
+}
+.tp-stars .half i{
+    color:#fff;
+}
+.footer-left p{
+    color:#bdbdbd;
+    font-size:12px;
+}
+.footer-left{
+    color:#d4d4d4;
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:10px;
+    padding-right: 0 50px;
+    border-right:2px solid rgba(255,255,255,.08);
+}
+.footer-left a{
+    color:#8f8f8f;
+    font-size:14px;
+    text-decoration:none;
+}
+.footer-left a:hover{
+    color:#ffffff;
+    text-decoration:underline;
+}
+/*======================================
+          CENTER
+======================================*/
+.footer-center{
+
+    padding:0 40px;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+.footer-center ul{
+    list-style:none;
+    margin-bottom:22px;
+}
+
+.footer-center ul li{
+    margin-bottom:12px;
+}
+
+.footer-center ul li a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.footer-center ul li a:hover{
+    color:#ff6a00;
+}
+
+.orange-links li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.orange-links i{
+    color:#ff6a00;
+    font-size:18px;
+    width:20px;
+}
+
+/*======================================
+          RIGHT
+======================================*/
+
+.footer-right h3{
+    color:#ffffff;
+    font-size:18px;
+    margin-bottom:22px;
+    font-weight:500;
+}
+
+/*======================================
+       SOCIAL ICONS
+======================================*/
+
+.social-icons{
+    display:flex;
+    gap:16px;
+    margin-bottom:35px;
+}
+
+.social-icons a{
+    width:46px;
+    height:46px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    text-decoration:none;
+
+    color:#fff;
+    font-size:20px;
+
+    transition:.3s;
+}
+
+/* Individual Colors */
+
+.social-icons a:nth-child(1){
+    background:#1877f2;
+}
+
+.social-icons a:nth-child(2){
+    background:#111;
+}
+
+.social-icons a:nth-child(3){
+    background:#ff5700;
+}
+
+.social-icons a:nth-child(4){
+    background:#229ED9;
+}
+
+.social-icons a:nth-child(5){
+    background:#ff0000;
+}
+
+.social-icons a:nth-child(6){
+    background:#9146FF;
+}
+
+.social-icons a:hover{
+    transform:translateY(-4px);
+}
+
+/*==========================
+      STORE BUTTONS
+==========================*/
+.store-buttons{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-top:16px;
+    flex-wrap:wrap;
+    cursor:pointer;
+    background-color: transparent;
+
+}
+.store-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 22px;
+    background:#1b1b1b;
+    color:#fff;
+    text-decoration:none;
+    border:2px solid #444;
+    border-radius:40px;
+    transition:.3s ease;
+}
+.store-buttons a{
+    display:block;
+    text-decoration:none;
+    border-color:white;
+
+}
+.store-buttons img{
+    height:28px;
+    width:auto;
+    display:block;
+    transition:.3s ease;
+}
+.store-buttons img:hover{
+    transform:scale(1.05);
+}
+/*======================================
+      FOOTER HOVER EFFECTS
+======================================*/
+.footer-center ul li a,
+.footer-left a,
+.social-icons a,
+.store-buttons img,
+.payment-icons i{
+    transition:.3s ease;
+}
+.footer-center ul li a:hover{
+    color:#ff6a00;
+    padding-left:5px;
+}
+.footer-left a:hover{
+    color:#ffffff;
+}
+.social-icons a:hover{
+    transform:translateY(-4px) scale(1.08);
+}
+.store-buttons img:hover{
+    transform:scale(1.05);
+}
+.payment-icons i:hover{
+    color:#ff6a00;
+}
+/*==========================
+      FOOTER BOTTOM
+==========================*/
+.footer-bottom{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-right:50px;
+    margin-bottom:30px;
+    gap:20px;
+}
+.copyright-left p{
+    color:#fff;
+    font-size:14px;
+    margin-bottom:8px;
+    margin-left:40px;
+}
+.copyright-left a{
+    color:#9b9b9b;
+    text-decoration:none;
+    font-size:14px;
+    margin-left:40px;
+    margin-bottom:30px;
+}
+.copyright-left a:hover{
+    color:#a72828;
+    cursor:pointer;
+}
+.footer-bottom-right{
+    display:flex;
+    gap:35px;
+    align-items:center;
+}
+.footer-bottom-right span:hover{
+    color:#cfcfcf;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#e04e0a;
+    cursor:pointer;
+}
+.footer-bottom-right i:hover{
+    color:#e04e0a;
+    cursor:pointer;
+}
+
+
+/*=========================================
+        RESPONSIVE PART-1
+(Header + Navbar + Hero + Platform Bar)
+==========================================*/
+
+
+/*==============================
+        1200px - 1399px
+===============================*/
+
+@media (max-width:1399px){
+
+header{
+    padding:0 40px;
+}
+
+.hero-content{
+    left:70px;
+}
+
+.platform-bar{
+    width:460px;
+}
+
+.hero-content h1{
+    font-size:28px;
+}
+
+}
+
+
+/*==============================
+        992px - 1199px
+===============================*/
+
+@media (max-width:1199px){
+
+header{
+    padding:15px 35px;
+}
+
+nav ul{
+    gap:22px;
+}
+
+nav ul li a{
+    font-size:14px;
+}
+
+.header-icons{
+    gap:12px;
+}
+
+.header-icons a{
+    width:38px;
+    height:38px;
+    font-size:16px;
+}
+
+.platform-bar{
+    width:430px;
+    top:100px;
+}
+
+.platforms{
+    gap:22px;
+}
+
+.platforms a{
+    font-size:14px;
+}
+
+.search-btn{
+    width:55px;
+    height:55px;
+}
+
+.hero{
+    height:460px;
+}
+
+.hero-content{
+    left:60px;
+    width:360px;
+}
+
+.hero-content h1{
+    font-size:28px;
+    width:100%;
+}
+
+.amount{
+    font-size:24px;
+}
+
+}
+
+
+/*==============================
+        TABLET
+===============================*/
+
+@media (max-width:991px){
+
+header{
+    padding:15px 25px;
+    top:15px;
+}
+
+/* Hamburger */
+
+.menu-icon{
+    display:block;
+}
+
+nav{
+    position:absolute;
+    top:80px;
+    left:-100%;
+    width:100%;
+    background:#111;
+    transition:.4s;
+}
+
+#menu:checked~nav{
+    left:0;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:0;
+}
+
+nav ul li{
+    width:100%;
+}
+
+nav ul li a{
+    display:block;
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Hide icons */
+
+.header-icons{
+    display:none;
+}
+
+/* Platform */
+
+.platform-bar{
+    width:90%;
+    left:50%;
+    transform:translateX(-50%);
+    top:105px;
+}
+
+.platforms{
+    gap:18px;
+}
+
+.platforms a{
+    font-size:14px;
+}
+
+.platforms a i{
+    font-size:18px;
+}
+
+.search-btn{
+    width:50px;
+    height:50px;
+}
+
+/* Hero */
+
+.hero{
+    height:430px;
+    padding:30px;
+}
+
+.hero-content{
+    left:40px;
+    width:330px;
+}
+
+.hero-content h1{
+    font-size:24px;
+}
+
+.amount{
+    font-size:22px;
+}
+
+}
+
+
+/*==============================
+        MOBILE
+===============================*/
+
+@media (max-width:767px){
+
+header{
+    padding:15px 20px;
+    top:0;
+    min-height:70px;
+}
+
+.menu-icon{
+    display:block;
+    font-size:30px;
+}
+
+.header-icons{
+    display:none;
+}
+
+nav{
+    position:absolute;
+    top:70px;
+    left:-100%;
+    width:100%;
+    background:#111;
+    transition:.4s;
+}
+
+#menu:checked~nav{
+    left:0;
+}
+
+nav ul{
+    flex-direction:column;
+}
+
+nav ul li{
+    width:100%;
+}
+
+nav ul li a{
+    display:block;
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Platform */
+
+.platform-bar{
+    width:94%;
+    flex-direction:column;
+    gap:15px;
+    padding:18px;
+    border-radius:15px;
+    top:85px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.platforms{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.platforms a{
+    font-size:14px;
+}
+
+.search-btn{
+    width:48px;
+    height:48px;
+}
+
+.search-btn i{
+    font-size:20px;
+}
+
+/* Hero */
+
+.hero{
+    height:650px;
+    padding:20px;
+    justify-content:flex-end;
+}
+
+.hero-content{
+    position:relative;
+    left:0;
+    top:0;
+    transform:none;
+    width:100%;
+    text-align:center;
+}
+
+.hero-content h1{
+    width:100%;
+    font-size:26px;
+}
+
+.price{
+    justify-content:center;
+}
+
+.amount{
+    left:0;
+    bottom:0;
+    font-size:26px;
+}
+
+.discount{
+    position:relative;
+}
+
+}
+/*=========================================
+        RESPONSIVE PART-2
+(Trending + Features + Preorders +
+Recommended + Last Seen + Best Sellers)
+==========================================*/
+
+
+/*==================================
+        LAPTOP
+===================================*/
+
+@media (max-width:1199px){
+
+.trending,
+.preorders,
+.recommended,
+.last-seen,
+.best-sellers{
+    width:95%;
+}
+
+.video-container,
+.preorder-container,
+.recommended-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.best-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.best-card:nth-child(n){
+    grid-column:auto;
+}
+
+.last-card{
+    width:48%;
+}
+
+.features{
+    flex-wrap:wrap;
+}
+
+.feature-box{
+    flex:0 0 48%;
+    border:none;
+}
+
+}
+
+/*=========================================
+        TABLET RESPONSIVE
+        (768px - 991px)
+=========================================*/
+
+@media screen and (min-width:768px) and (max-width:991px){
+
+/* ================= HEADER ================= */
+
+header{
+    padding:18px 25px;
+    top:10px;
+}
+
+.menu-icon{
+    display:block;
+}
+
+.header-icons{
+    display:none;
+}
+
+nav{
+    position:absolute;
+    top:75px;
+    left:-100%;
+    width:100%;
+    background:#111;
+    transition:.4s;
+}
+
+#menu:checked~nav{
+    left:0;
+}
+
+nav ul{
+    flex-direction:column;
+}
+
+nav ul li{
+    width:100%;
+}
+
+nav ul li a{
+    display:block;
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* ================= PLATFORM ================= */
+
+.platform-bar{
+    width:96%;
+    left:50%;
+    transform:translateX(-50%);
+    top:95px;
+    padding:12px 18px;
+}
+
+.platforms{
+    gap:25px;
+}
+
+.search-btn{
+    width:55px;
+    height:55px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:520px;
+    padding:40px;
+}
+
+.hero-content{
+    width:450px;
+    left:40px;
+}
+
+.hero-content h1{
+    width:100%;
+    font-size:32px;
+}
+
+.amount{
+    font-size:26px;
+}
+
+/* ================= COMMON SECTION ================= */
+
+.trending,
+.preorders,
+.recommended,
+.last-seen,
+.best-sellers,
+.daily-deals,
+.top-india,
+.news-section{
+    width:98%;
+    margin:60px auto;
+}
+
+/* ================= GRID ================= */
+
+.video-container,
+.preorder-container,
+.recommended-container,
+.daily-grid,
+.india-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.best-container{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.best-card:nth-child(n){
+    grid-column:auto;
+}
+
+/* ================= IMAGES ================= */
+
+.game-img,
+.game-video,
+.game-imge,
+.gamee-video,
+.gam-img,
+.gam-video,
+.image1-box img,
+.image1-box video{
+    width:100%;
+    height:240px;
+}
+
+/* ================= LAST SEEN ================= */
+
+.lastseen-container{
+    gap:20px;
+}
+
+.last-card{
+    width:48%;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    flex-wrap:wrap;
+    gap:0;
+}
+
+.feature-box{
+    flex:0 0 50%;
+    border:none;
+    border-bottom:1px solid #333;
+}
+
+/* ================= FEEDBACK ================= */
+
+.feedback-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.feedback-image{
+    justify-content:center;
+    margin:0;
+}
+
+.feedback-content{
+    padding:0;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.review-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* ================= TOP INDIA ================= */
+
+.india-wrapper{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.india-right{
+    margin:0;
+}
+
+.featured-game{
+    height:600px;
+}
+
+/* ================= NEWS ================= */
+
+.news-container{
+    max-width:100%;
+    transform:none;
+}
+
+.news-card{
+    gap:20px;
+}
+
+.news-image{
+    width:300px;
+    min-width:300px;
+    height:180px;
+    margin-left:0;
+}
+
+/* ================= CATEGORY ================= */
+
+.india-section{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* ================= PROMO ================= */
+
+.promo-content{
+    padding:40px;
+}
+
+.promo-text{
+    width:50%;
+}
+
+.promo-image{
+    width:45%;
+}
+
+/* ================= FAQ ================= */
+
+.faq-section{
+    max-width:95%;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-container{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.footer-left,
+.footer-center{
+    border:none;
+    padding:0;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+.footer-bottom-right{
+    justify-content:center;
+}
+
+.copyright-left p,
+.copyright-left a{
+    margin-left:0;
+}
+
+}
+
+/*==================================
+        MOBILE
+===================================*/
+
+@media (max-width:767px){
+
+.trending,
+.preorders,
+.recommended,
+.last-seen,
+.best-sellers{
+    width:94%;
+    margin:50px auto;
+}
+
+.trending h2,
+.preorders h2,
+.recommended h2,
+.last-seen h2,
+.best-sellers h2{
+    font-size:22px;
+}
+
+/*======================
+Trending
+======================*/
+
+.video-container{
+    grid-template-columns:1fr;
+    gap:22px;
+}
+
+.image-box{
+    width:100%;
+}
+
+.game-img,
+.game-video{
+    width:100%;
+    height:220px;
+}
+
+.game-info h4{
+    font-size:16px;
+}
+
+.game-info p{
+    font-size:20px;
+}
+
+/*======================
+Pre Orders
+======================*/
+
+.preorder-container{
+    grid-template-columns:1fr;
+}
+
+.fourth-card{
+    grid-column:auto;
+}
+
+.game-imge,
+.gamee-video{
+    height:220px;
+}
+
+/*======================
+Recommended
+======================*/
+
+.recommended-container{
+    grid-template-columns:1fr;
+}
+
+.gam-img,
+.gam-video{
+    height:220px;
+}
+
+/*======================
+Last Seen
+======================*/
+
+.lastseen-container{
+    flex-direction:column;
+}
+
+.last-card{
+    width:100%;
+}
+
+/*======================
+Best Sellers
+======================*/
+
+.best-container{
+    grid-template-columns:1fr;
+    gap:22px;
+}
+
+.best-card:nth-child(n){
+    grid-column:auto;
+}
+
+.image1-box img,
+.image1-box video{
+    height:220px;
+
+}
+
+/*======================
+Features
+======================*/
+
+.features{
+    flex-direction:column;
+    gap:0;
+}
+
+.feature-box{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #333;
+    padding:20px;
+}
+
+.feature-box:last-child{
+    border-bottom:none;
+}
+
+.feature-box h3{
+    font-size:17px;
+}
+
+.feature-box p{
+    font-size:13px;
+}
+}
+/* ===========================================
+   MOBILE (MAX WIDTH: 480px)
+=========================================== */
+
+@media screen and (max-width:480px){
+
+/* Hero */
+.hero{
+    height:500px;
+    padding:20px;
+    background-position:center;
+}
+
+.hero-content{
+    position:absolute;
+    left:20px;
+    top:55%;
+    width:90%;
+}
+
+.hero-content h1{
+    font-size:22px;
+    width:100%;
+}
+
+.amount{
+    font-size:20px;
+    left:0;
+}
+
+.price{
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+/* Header */
+
+header{
+    padding:15px;
+}
+
+.logo img{
+    width:130px;
+}
+
+/* Platform */
+
+.platform-bar{
+    width:95%;
+    top:80px;
+    padding:10px;
+}
+
+.platforms{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.platforms a{
+    font-size:12px;
+}
+
+.platforms a i{
+    font-size:15px;
+}
+
+.search-btn{
+    width:42px;
+    height:42px;
+}
+
+.search-btn i{
+    font-size:18px;
+}
+
+/* Sections */
+
+.trending,
+.preorders,
+.recommended,
+.best-sellers,
+.last-seen,
+.daily-deals{
+    width:95%;
+}
+
+/* Grid */
+
+.video-container,
+.preorder-container,
+.recommended-container,
+.best-container,
+.review-container,
+.daily-grid,
+.india-grid,
+.india-section{
+    grid-template-columns:1fr;
+}
+
+/* Cards */
+
+.videos,
+.card,
+.recommend-card,
+.best-card,
+.last-card,
+.daily-card,
+.india-card{
+    width:100%;
+}
+
+.game-img,
+.game-video,
+.game-imge,
+.gamee-video,
+.gam-img,
+.gam-video{
+    height:200px;
+}
+
+/* Reviews */
+
+.reviews-container{
+    display:flex;
+    overflow-x:auto;
+}
+
+.review-card{
+    min-width:280px;
+}
+
+/* Gamer Reviews */
+
+.review-container{
+    grid-template-columns:1fr;
+}
+
+/* News */
+
+.news-card{
+    flex-direction:column;
+}
+
+.news-image{
+    width:100%;
+    min-width:100%;
+    height:220px;
+    margin-left:0;
+}
+
+.news-content{
+    width:100%;
+}
+
+/* Promo */
+
+.promo-content{
+    flex-direction:column;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.promo-text,
+.promo-image{
+    width:100%;
+}
+
+.promo-text h2{
+    font-size:25px;
+}
+
+.promo-text p{
+    font-size:15px;
+}
+
+.promo-image img{
+    max-width:320px;
+}
+
+/* FAQ */
+
+.faq-section{
+    padding:0 15px;
+}
+
+.faq-box{
+    padding:18px;
+    font-size:14px;
+}
+
+/* Footer */
+
+.footer{
+    padding:40px 20px;
+}
+
+.footer-container{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.footer-left,
+.footer-center{
+    border:none;
+    padding:0;
+}
+
+.social-icons{
+    flex-wrap:wrap;
+}
+
+.store-buttons{
+    justify-content:center;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    text-align:center;
+    margin:0;
+}
+
+.footer-bottom-right{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.copyright-left p,
+.copyright-left a{
+    margin-left:0;
+}
+
+/* Features */
+
+.features{
+    flex-direction:column;
+}
+
+.feature-box{
+    width:100%;
+    border:none;
+}
+
+/* Feedback */
+
+.feedback-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.feedback-image{
+    margin:0;
+    justify-content:center;
+}
+
+.feedback-image img{
+    width:180px;
+}
+
+.feedback-content{
+    padding:0;
+}
+
+/* Top India */
+
+.india-wrapper{
+    grid-template-columns:1fr;
+}
+
+.india-right{
+    margin:0;
+}
+
+.featured-game{
+    height:350px;
+}
+
+/* Category Banner */
+
+.category-banner{
+    height:160px;
+}
+
+.category-banner h3{
+    font-size:20px;
+}
+
+.character{
+    height:120px;
+}
+
+}
